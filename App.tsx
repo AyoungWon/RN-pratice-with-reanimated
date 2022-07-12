@@ -9,11 +9,11 @@ import {
 } from "react-native";
 import { runOnUI } from "react-native-reanimated";
 
-export default function App() {
-  const handleButton = () => {
-    alert("춘식이는 귀엽다.");
-  };
+if (__DEV__) {
+  import("./ReactotronConfig").then(() => console.log("Reactotron Configured"));
+}
 
+export default function App() {
   function someWorklet(greeting: string) {
     "worklet";
     console.log("Hey I'm running on the UI thread");
@@ -31,7 +31,7 @@ export default function App() {
           style={{ width: 200, height: 200 }}
         />
         <Text>hello world!</Text>
-        <Button onPress={handleButton} title={"Touch me"} />
+        <Button onPress={onPress} title={"Touch me"} />
         <StatusBar style="auto" />
       </View>
     </View>
