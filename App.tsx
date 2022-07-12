@@ -9,10 +9,6 @@ import {
 } from "react-native";
 import { runOnUI } from "react-native-reanimated";
 
-if (__DEV__) {
-  import("./ReactotronConfig").then(() => console.log("Reactotron Configured"));
-}
-
 export default function App() {
   function someWorklet(greeting: string) {
     "worklet";
