@@ -1,16 +1,17 @@
 import React, { HTMLAttributes } from "react";
 import { Button, StyleSheet, Text, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
+import RoundButton from "../components/RoundButton";
 
 const Home = ({ navigation }) => {
   return (
-    <SafeAreaView>
-      <View>
-        <Button
+    <SafeAreaView style={styles.outer}>
+      <View style={styles.container}>
+        <RoundButton
           title="Todo list"
           onPress={() => navigation.navigate("TodoList")}
         />
-        <Button
+        <RoundButton
           title="Card drag"
           onPress={() => navigation.navigate("CardDrag")}
         />
@@ -29,6 +30,7 @@ const styles = StyleSheet.create({
     flexDirection: "column",
     alignItems: "center",
     justifyContent: "center",
+    padding: 10,
   },
 });
 export default Home;
