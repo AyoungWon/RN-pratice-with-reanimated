@@ -14,7 +14,6 @@ type AnimatedGHContext = {
   offsetY: number;
 };
 
-const CARD_IMAGE_URL = "../../../assets/card_chunsik.png";
 const CardDrag = () => {
   const { width, height } = useWindowDimensions();
   const [imageSize, setImageSize] = useState({ width: 0, height: 0 });
@@ -57,7 +56,9 @@ const CardDrag = () => {
   });
 
   useEffect(() => {
-    const { width, height } = Image.resolveAssetSource(require(CARD_IMAGE_URL));
+    const { width, height } = Image.resolveAssetSource(
+      require("@assets/card_chunsik_column_0.png")
+    );
     setImageSize({ width, height });
   }, []);
 
@@ -73,7 +74,7 @@ const CardDrag = () => {
     <SafeAreaView style={{ ...styles.outer, height }}>
       <PanGestureHandler {...{ onGestureEvent }}>
         <Animated.View style={cardStyle}>
-          <Image source={require(CARD_IMAGE_URL)} />
+          <Image source={require("@assets/card_chunsik_column_0.png")} />
         </Animated.View>
       </PanGestureHandler>
     </SafeAreaView>

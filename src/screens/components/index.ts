@@ -1,3 +1,4 @@
 import RoundButton from "./RoundButton";
+import Card from "./Card";
 
-export default { RoundButton };
+export default { RoundButton, Card };
