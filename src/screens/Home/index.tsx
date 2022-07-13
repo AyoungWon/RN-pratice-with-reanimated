@@ -8,11 +8,11 @@ const Home = ({ navigation }) => {
     <SafeAreaView style={styles.outer}>
       <View style={styles.container}>
         <RoundButton
-          title="Todo list"
+          title="🧱 Todo list (Layout Animation)"
           onPress={() => navigation.navigate("TodoList")}
         />
         <RoundButton
-          title="Card drag"
+          title="💳 Card drag (Pan Gesture)"
           onPress={() => navigation.navigate("CardDrag")}
         />
       </View>
