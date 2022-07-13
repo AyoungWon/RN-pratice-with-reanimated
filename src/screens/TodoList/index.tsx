@@ -2,6 +2,7 @@ import { Button, StyleSheet, Text, View } from "react-native";
 import React, { useState } from "react";
 
 import Task from "./Task";
+import { SafeAreaView } from "react-native-safe-area-context";
 const TodoList = () => {
   const [tasks, setTasks] = useState<string[]>(["Learn"]);
   const insertTaskAtRandom = () => {
@@ -13,18 +14,21 @@ const TodoList = () => {
     });
   };
   return (
-    <View style={styles.container}>
-      <View style={styles.listWrap}>
-        {tasks.map((item, idx) => (
-          <Task key={item} task={item} idx={idx} />
-        ))}
+    <SafeAreaView style={styles.outer}>
+      <View style={styles.container}>
+        <View style={styles.listWrap}>
+          {tasks.map((item, idx) => (
+            <Task key={item} task={item} idx={idx} />
+          ))}
+        </View>
+        <Button title="ADD" onPress={insertTaskAtRandom} />
       </View>
-      <Button title="ADD" onPress={insertTaskAtRandom} />
-    </View>
+    </SafeAreaView>
   );
 };
 
 const styles = StyleSheet.create({
+  outer: { flex: 1 },
   container: {
     flex: 1,
     display: "flex",
