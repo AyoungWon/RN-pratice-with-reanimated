@@ -9,7 +9,7 @@ module.exports = function (api) {
         {
           paths: [
             {
-              rootPathPrefix: "~",
+              rootPathPrefix: "@src",
               rootPathSuffix: "./src",
             },
             {

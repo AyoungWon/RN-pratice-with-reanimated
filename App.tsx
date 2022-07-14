@@ -19,6 +19,10 @@ export default function App() {
         <Stack.Screen name="TodoList" component={Screens.TodoList} />
         <Stack.Screen name="CardDrag" component={Screens.CardDrag} />
         <Stack.Screen name="CardSpread" component={Screens.CardSpread} />
+        <Stack.Screen
+          name="CircularSlider"
+          component={Screens.CircularSlider}
+        />
       </Stack.Navigator>
     </NavigationContainer>
   );

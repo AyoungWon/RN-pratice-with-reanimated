@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import { Button, Dimensions, StyleSheet, View } from "react-native";
 import Animated, { useAnimatedStyle } from "react-native-reanimated";
 import { SafeAreaView } from "react-native-safe-area-context";
-import { cards, Card, Cards } from "../components/Card";
+import { cards, Card, Cards } from "../../components/Card";
 import { useSpring, mix } from "react-native-redash";
-import RoundButton from "../components/RoundButton";
+import RoundButton from "../../components/RoundButton";
 
 type Props = {
   transition: Animated.SharedValue<number>;

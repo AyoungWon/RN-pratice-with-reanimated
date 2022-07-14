@@ -1,7 +1,7 @@
-import React, { HTMLAttributes } from "react";
-import { Button, StyleSheet, Text, View } from "react-native";
+import React from "react";
+import { StyleSheet, View } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
-import RoundButton from "../components/RoundButton";
+import RoundButton from "../../components/RoundButton";
 
 const Home = ({ navigation }) => {
   return (
@@ -16,8 +16,12 @@ const Home = ({ navigation }) => {
           onPress={() => navigation.navigate("CardDrag")}
         />
         <RoundButton
-          title="💳 Card spread (Transition)"
+          title="🂱🃑🂡 Card spread (Transition)"
           onPress={() => navigation.navigate("CardSpread")}
+        />
+        <RoundButton
+          title="⭕️ Circular slider"
+          onPress={() => navigation.navigate("CircularSlider")}
         />
       </View>
     </SafeAreaView>
