@@ -1,9 +1,10 @@
 import React, { useState } from "react";
-import { Dimensions, StyleSheet } from "react-native";
+import { Button, Dimensions, StyleSheet, View } from "react-native";
 import Animated, { useAnimatedStyle } from "react-native-reanimated";
 import { SafeAreaView } from "react-native-safe-area-context";
 import { cards, Card, Cards } from "../components/Card";
 import { useSpring, mix } from "react-native-redash";
+import RoundButton from "../components/RoundButton";
 
 type Props = {
   transition: Animated.SharedValue<number>;
@@ -39,15 +40,36 @@ const CardItem = ({ index, cardItem, transition }: Props) => {
     </Animated.View>
   );
 };
-export const CardSpread = () => {
+const CardSpread = () => {
   const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const transition = useSpring(isOpen);
   return (
-    <SafeAreaView>
+    <SafeAreaView style={styles.container}>
       {cards.map((cardItem, idx) => (
-        <CardItem index={idx} transition={transition} cardItem={cardItem} />
+        <CardItem
+          index={idx}
+          transition={transition}
+          cardItem={cardItem}
+          key={cardItem}
+        />
       ))}
+      <View style={styles.button}>
+        <RoundButton onPress={() => setIsOpen((prev) => !prev)} title="Click" />
+      </View>
     </SafeAreaView>
   );
 };
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+  },
+  button: {
+    marginBottom: 10,
+    marginTop: "auto",
+    padding: 40,
+  },
+});
+
+export default CardSpread;

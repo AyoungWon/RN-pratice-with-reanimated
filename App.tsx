@@ -18,6 +18,7 @@ export default function App() {
         <Stack.Screen name="Home" component={Screens.Home} />
         <Stack.Screen name="TodoList" component={Screens.TodoList} />
         <Stack.Screen name="CardDrag" component={Screens.CardDrag} />
+        <Stack.Screen name="CardSpread" component={Screens.CardSpread} />
       </Stack.Navigator>
     </NavigationContainer>
   );

@@ -6,14 +6,6 @@ const ratio = 228 / 362;
 export const CARD_WIDTH = width * 0.8;
 export const CARD_HEIGHT = CARD_WIDTH * ratio;
 
-const styles = StyleSheet.create({
-  card: {
-    width: CARD_WIDTH,
-    height: CARD_HEIGHT,
-    borderRadius: 16,
-  },
-});
-
 export const columnAssets = [
   require("@assets/card_chunsik_column_0.png"),
   require("@assets/card_chunsik_column_1.png"),
@@ -23,6 +15,7 @@ export const columnAssets = [
 export const rowAssets = [
   require("@assets/card_chunsik_row_0.png"),
   require("@assets/card_chunsik_row_1.png"),
+  require("@assets/card_chunsik_row_2.png"),
 ];
 
 export enum Cards {
@@ -51,3 +44,11 @@ export default {
   Card,
   cards,
 };
+
+const styles = StyleSheet.create({
+  card: {
+    width: CARD_WIDTH,
+    height: CARD_HEIGHT,
+    borderRadius: 16,
+  },
+});

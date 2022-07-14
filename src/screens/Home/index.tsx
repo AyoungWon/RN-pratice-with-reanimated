@@ -15,6 +15,10 @@ const Home = ({ navigation }) => {
           title="💳 Card drag (Pan Gesture)"
           onPress={() => navigation.navigate("CardDrag")}
         />
+        <RoundButton
+          title="💳 Card spread (Transition)"
+          onPress={() => navigation.navigate("CardSpread")}
+        />
       </View>
     </SafeAreaView>
   );
