@@ -1,7 +1,6 @@
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import React from "react";
-import { StyleSheet } from "react-native";
 import Screens from "./src/screens";
 
 const Stack = createNativeStackNavigator();
@@ -22,6 +21,10 @@ export default function App() {
         <Stack.Screen
           name="CircularSlider"
           component={Screens.CircularSlider}
+        />
+        <Stack.Screen
+          name="DynamicSprings"
+          component={Screens.DynamicSprings}
         />
       </Stack.Navigator>
     </NavigationContainer>
