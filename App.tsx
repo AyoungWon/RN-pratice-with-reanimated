@@ -26,6 +26,7 @@ export default function App() {
           name="DynamicSprings"
           component={Screens.DynamicSprings}
         />
+        <Stack.Screen name="DragSort" component={Screens.DragSort} />
       </Stack.Navigator>
     </NavigationContainer>
   );

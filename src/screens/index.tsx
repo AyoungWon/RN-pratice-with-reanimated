@@ -4,6 +4,7 @@ import TodoList from "./TodoList";
 import CardSpread from "./CardSpread";
 import CircularSlider from "./CircularSlider";
 import DynamicSprings from "./DynamicSprings";
+import DragSort from "./DragSort";
 
 export default {
   CardDrag,
@@ -12,4 +13,5 @@ export default {
   CardSpread,
   CircularSlider,
   DynamicSprings,
+  DragSort,
 };

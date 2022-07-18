@@ -24,8 +24,12 @@ const Home = ({ navigation }) => {
           onPress={() => navigation.navigate("CircularSlider")}
         />
         <RoundButton
-          title="DynamicSprings"
+          title="Dynamic springs"
           onPress={() => navigation.navigate("DynamicSprings")}
+        />
+        <RoundButton
+          title="Drag sort"
+          onPress={() => navigation.navigate("DragSort")}
         />
       </View>
     </SafeAreaView>
